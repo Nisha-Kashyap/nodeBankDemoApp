@@ -1,0 +1,20 @@
+<h1>Welcome to Node JS Bank</h1> <hr>
+<% if(action=='WELCOME') { %>
+<fieldset>
+    <legend>Welcome</legend>
+    <h5>Customer Name:
+        <%= userdata.fullname %>
+    </h5>
+    <h5>Email:
+        <%= userdata.email %>
+    </h5>
+    <h5>Balance:
+        <%= userdata.balance %>
+    </h5>
+    <a href="/member/withdraw">Withdraw</a> &nbsp; &nbsp;
+    <a href="/member/deposit">Deposit</a> &nbsp; &nbsp;
+    <a href="/member/logout">Logout</a>
+</fieldset>
+<% } else { %>
+    <%- include('transaction') %>
+<% } %>

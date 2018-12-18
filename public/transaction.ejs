@@ -1,0 +1,22 @@
+<form method="POST" action="/member/transaction">
+   
+            <h2><%= action %></h2>
+            <hr>        
+            <div class="form-group">
+                <label for="amount">Fill Amount:</label>
+                <div class="input-group">
+                   <input type="text" name="amount" class="form-control" id="amount" placeholder="Amount" required autofocus>
+                </div>
+            </div>
+
+        <input type="hidden" name="userid" value=<%= userdata.id %>>
+        <input type="hidden" name="action" value=<%= action %>>
+        
+    </div>
+    <div style="padding-top: 1rem">
+        <div>
+            <button type="submit"><%= action %></button><br>
+            <a href="/member">Go Back</a>
+        </div>
+    </div>
+</form>
